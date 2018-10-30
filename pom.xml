@@ -55,6 +55,9 @@
     <!-- 子模块 -->
     <modules>
         <module>showurs-example-kafka-eureka</module>
+        <module>showurs-example-kafka-config</module>
+        <module>showurs-example-kafka-producer</module>
+        <module>showurs-example-kafka-consumer</module>
     </modules>
 
 </project>

@@ -1,0 +1,18 @@
+server:
+  port: 9200
+
+spring:
+  application:
+    name: showurs-example-kafka-producer
+  http:
+    encoding:
+      charset: utf-8
+  servlet:
+    multipart:
+      max-request-size: 256MB
+      max-file-size: 512MB
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
