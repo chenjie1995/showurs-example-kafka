@@ -11,8 +11,14 @@ spring:
           uri: https://github.com/chenjie1995/showurs-example-kafka.git
           search-paths: config-file
       label: master
+    bus:
+      trace:
+        enabled: true
 
 management:
+  endpoint:
+    bus-refresh:
+      enabled: true
   endpoints:
     web:
       exposure:
