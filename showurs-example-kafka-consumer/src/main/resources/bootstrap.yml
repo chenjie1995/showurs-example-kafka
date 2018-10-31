@@ -4,13 +4,14 @@ server:
 spring:
   application:
     name: showurs-example-kafka-consumer
-  http:
-    encoding:
-      charset: utf-8
-  servlet:
-    multipart:
-      max-request-size: 256MB
-      max-file-size: 512MB
+  cloud:
+    config:
+      name: showurs-example-kafka-consumer
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: showurs-example-kafka-config
+      label: master
 
 eureka:
   client:
