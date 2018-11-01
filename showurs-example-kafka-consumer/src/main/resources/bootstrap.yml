@@ -12,6 +12,17 @@ spring:
         enabled: true
         service-id: showurs-example-kafka-config
       label: master
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-add-partitions: true
+      bindings:
+        output:
+          destination: testDefault
+        input:
+          destination: testDefault
 
 eureka:
   client:
