@@ -1,4 +1,4 @@
-package cn.showurs.example.kafka.producer.kafka;
+package cn.showurs.example.kafka.producer.kafka.service;
 
 import org.springframework.messaging.Message;
 

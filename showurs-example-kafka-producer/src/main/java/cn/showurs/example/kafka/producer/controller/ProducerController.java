@@ -1,6 +1,6 @@
 package cn.showurs.example.kafka.producer.controller;
 
-import cn.showurs.example.kafka.producer.kafka.KafkaService;
+import cn.showurs.example.kafka.producer.kafka.service.KafkaService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;

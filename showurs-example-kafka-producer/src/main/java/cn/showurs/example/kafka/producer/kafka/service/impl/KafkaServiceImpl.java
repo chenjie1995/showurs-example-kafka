@@ -1,6 +1,6 @@
-package cn.showurs.example.kafka.producer.kafka.impl;
+package cn.showurs.example.kafka.producer.kafka.service.impl;
 
-import cn.showurs.example.kafka.producer.kafka.KafkaService;
+import cn.showurs.example.kafka.producer.kafka.service.KafkaService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
