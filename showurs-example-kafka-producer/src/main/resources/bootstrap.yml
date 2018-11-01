@@ -19,10 +19,12 @@ spring:
           brokers: localhost:9092
           auto-add-partitions: true
       bindings:
-        input:
-          destination: testDefault
-        output:
-          destination: testDefault
+        #派发工作output
+        dis-work:
+          destination: new-work
+        #检查工作input
+        check-work:
+          destination: done-work
 
 eureka:
   client:

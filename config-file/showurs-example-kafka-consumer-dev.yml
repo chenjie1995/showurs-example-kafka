@@ -1,14 +1,14 @@
 name: 消费者
-spring:
-  cloud:
-    stream:
-      default-binder: kafka
-      kafka:
-        binder:
-          brokers: localhost:9092
-          auto-add-partitions: true
-      bindings:
-        input:
-          destination: testDefault
-        output:
-          destination: testDefault
+#spring:
+#  cloud:
+#    stream:
+#      default-binder: kafka
+#      kafka:
+#        binder:
+#          brokers: localhost:9092
+#          auto-add-partitions: true
+#      bindings:
+#        input:
+#          destination: testDefault
+#        output:
+#          destination: testDefault

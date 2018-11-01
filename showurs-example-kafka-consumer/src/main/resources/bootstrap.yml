@@ -17,3 +17,16 @@ spring:
         enabled: true
         service-id: showurs-example-kafka-config
       label: master
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-add-partitions: true
+      bindings:
+        #接受工作input
+        receive-work:
+          destination: new-work
+        #提交工作output
+        commit-work:
+          destination: done-work
