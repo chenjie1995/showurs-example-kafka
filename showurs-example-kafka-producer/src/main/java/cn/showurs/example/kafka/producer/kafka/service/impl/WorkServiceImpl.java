@@ -28,12 +28,13 @@ public class WorkServiceImpl implements WorkService {
 
     @Override
     public Boolean disWork(Work work) {
+        logger.info("派发工作：{}", work.toString());
         return bossWork.disWork().send(MessageBuilder.withPayload(work).build());
     }
 
     @Override
     @StreamListener(BossWork.CHECK_WORK)
     public void checkWork(Message<Work> message) {
-        logger.info(message.getPayload().toString());
+        logger.info("检查工作：{}", message.getPayload().toString());
     }
 }

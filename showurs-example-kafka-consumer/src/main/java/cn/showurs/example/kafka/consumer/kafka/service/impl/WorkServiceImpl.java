@@ -30,6 +30,7 @@ public class WorkServiceImpl implements WorkService {
 
     @Override
     public Boolean commitWork(Work work) {
+        logger.info("提交工作：{}", work.toString());
         return staffWork.commitWork().send(MessageBuilder.withPayload(work).build());
     }
 
@@ -39,6 +40,7 @@ public class WorkServiceImpl implements WorkService {
         try {
             Thread.sleep(3000);
             Work work = message.getPayload();
+            logger.info("接收工作：{}", work.toString());
             work.setCompleteTime(new Date());
             work.setCompleter("chenjie");
             work.setStatus(1);
