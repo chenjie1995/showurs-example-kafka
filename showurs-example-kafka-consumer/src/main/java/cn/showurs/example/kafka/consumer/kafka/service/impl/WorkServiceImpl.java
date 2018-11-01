@@ -37,10 +37,10 @@ public class WorkServiceImpl implements WorkService {
     @Override
     @StreamListener(StaffWork.RECEIVE_WORK)
     public void receiveWork(Message<Work> message) {
+        Work work = message.getPayload();
+        logger.info("接收工作：{}", work.toString());
         try {
-            Thread.sleep(3000);
-            Work work = message.getPayload();
-            logger.info("接收工作：{}", work.toString());
+            Thread.sleep(30000);
             work.setCompleteTime(new Date());
             work.setCompleter("chenjie");
             work.setStatus(1);
